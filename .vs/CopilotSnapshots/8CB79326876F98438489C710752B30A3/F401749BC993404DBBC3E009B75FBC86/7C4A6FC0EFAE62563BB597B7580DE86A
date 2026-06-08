@@ -1,0 +1,116 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* --- FIXED: Added Dynamic Styling Tweaks for Small Mobile Profiles --- */
+@media (max-width: 991.98px) {
+    .sticky-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        visibility: hidden;
+        box-shadow: 10px 0 30px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding-top: 85px !important; /* Pushes links down below fixed header height */
+    }
+
+        .sticky-sidebar.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+}
+
+/* Kanban board and card styles */
+.kanban-board {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.kanban-column {
+  min-width: 280px;
+  background: #f6f8fb;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.kanban-column h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.issue-card {
+  background: #fff;
+  border: 1px solid #e9eef6;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 10px rgba(15,23,42,0.03);
+}
+
+.issue-card .meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.badge-subtle {
+  background: rgba(79,70,229,0.06);
+  color: #4f46e5;
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 767.98px) {
+  .kanban-board { flex-direction: column; }
+  .kanban-column { min-width: 100%; }
+}
+
+/* Drag and drop visuals */
+.kanban-column.drag-over {
+  box-shadow: inset 0 0 0 3px rgba(79,70,229,0.06);
+  background: #f4f6fb;
+}
+
+.issue-card.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+/* Compact table rows and small buttons for dense display */
+.table th, .table td {
+  padding: 0.4rem 0.6rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.4rem;
+  font-size: 0.78rem;
+}
+
+

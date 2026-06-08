@@ -1,0 +1,199 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+
+<!-- MAIN SUB-WORKSPACE GRID -->
+<div class="col-12  pt-3 px-3 px-md-0">
+    <div class="d-flex flex-column gap-3">
+
+        <!-- Load Alert Strip -->
+        <div class="alert alert-warning py-2 px-3 border-0 d-flex justify-content-between align-items-center mb-0 rounded" style="font-size: 0.78rem;">
+            <div><i class="bi bi-activity me-2"></i><strong>Network Metric Notification:</strong> Regional database nodes are experiencing heavy transaction sync processing. Expect minor delivery queues.</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" style="font-size: 0.6rem;"></button>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="row g-3">
+            <div class="col-12 col-md-3 col-sm-12">
+                <div class="premium-panel p-3 action-card d-flex align-items-center justify-content-between">
+                    <div>
+                        <span class="text-muted d-block small">Open Allocations</span>
+                        <h4 class="fw-700 my-0.5">142</h4>
+                        <span class="text-success fw-500" style="font-size: 0.7rem;"><i class="bi bi-arrow-up-short"></i> +12% Today</span>
+                    </div>
+                    <div class="text-primary bg-primary-subtle px-2 py-1 rounded"><i class="bi bi-cpu fs-5"></i></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-sm-12">
+                <div class="premium-panel p-3 action-card d-flex align-items-center justify-content-between">
+                    <div>
+                        <span class="text-muted d-block small">Pending Verification</span>
+                        <h4 class="fw-700 my-0.5">19</h4>
+                        <span class="text-warning fw-500" style="font-size: 0.7rem;">Priority Queue</span>
+                    </div>
+                    <div class="text-warning bg-warning-subtle px-2 py-1 rounded"><i class="bi bi-hourglass-split fs-5"></i></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-sm-12">
+                <div class="premium-panel p-3 action-card d-flex align-items-center justify-content-between">
+                    <div>
+                        <span class="text-muted d-block small">Settled Income</span>
+                        <h4 class="fw-700 my-0.5">$12.4K</h4>
+                        <span class="text-success fw-500" style="font-size: 0.7rem;"><i class="bi bi-shield-check"></i> System Audited</span>
+                    </div>
+                    <div class="text-success bg-success-subtle px-2 py-1 rounded"><i class="bi bi-wallet2 fs-5"></i></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-sm-12">
+                <div class="premium-panel p-3 action-card d-flex align-items-center justify-content-between">
+                    <div>
+                        <span class="text-muted d-block small">Node Availability</span>
+                        <h4 class="fw-700 my-0.5">99.9%</h4>
+                        <span class="text-info fw-500" style="font-size: 0.7rem;">Stable Line</span>
+                    </div>
+                    <div class="text-info bg-info-subtle px-2 py-1 rounded"><i class="bi bi-activity fs-5"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Splitting Sections -->
+        <div class="row g-3">
+            <div class="col-12 col-xl-7">
+                <div class="premium-panel p-3 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-700 mb-0"><i class="bi bi-plus-square text-primary me-2"></i>Service Record Initialization</h6>
+                        <span class="text-muted badge bg-light border text-dark">Token: #OS-9921</span>
+                    </div>
+                    <form>
+                        <div class="row g-2.5">
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label text-muted fw-500 mb-1">Applicant Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label text-muted fw-500 mb-1">Contact Email</label>
+                                <input type="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label text-muted fw-500 mb-1">Service Type Matrix</label>
+                                <select class="form-select">
+                                    <option selected>Corporate Business Licensing</option>
+                                    <option value="1">Tax Infrastructure Setup</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label class="form-label text-muted fw-500 mb-1">Escalation Route</label>
+                                <div class="d-flex gap-2">
+                                    <input type="radio" class="btn-check" name="tier-options" id="t1" checked>
+                                    <label class="btn btn-outline-secondary w-100" for="t1">Standard Base</label>
+                                    <input type="radio" class="btn-check" name="tier-options" id="t2">
+                                    <label class="btn btn-outline-danger w-100" for="t2">Express</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="border border-dashed rounded p-3 text-center bg-light position-relative">
+                                    <i class="bi bi-cloud-arrow-up text-muted fs-5"></i>
+                                    <p class="mb-0 fw-500 text-dark mt-1" style="font-size: 0.78rem;">Deploy verification documentation manifest here</p>
+                                    <input type="file" class="position-absolute top-0 start-0 w-100 h-100 opacity-0" style="cursor: pointer;">
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-light border px-3">Flush Fields</button>
+                                <button type="submit" class="btn btn-primary px-4 shadow-sm">Commit Record</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Pipeline Tracking Progress -->
+            <div class="col-12 col-xl-5">
+                <div class="premium-panel p-3 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h6 class="fw-700 mb-3"><i class="bi bi-shuffle text-info me-2"></i>Active Operations Pipeline</h6>
+                        <div class="p-2 bg-light rounded border mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-600" style="font-size: 0.75rem;">Routing Node: #4412-A</span>
+                                <span class="badge bg-primary-subtle text-primary fw-normal" style="font-size: 0.65rem;">Active Sync</span>
+                            </div>
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <div class="position-relative ps-3 border-start ms-1 d-flex flex-column gap-3" style="font-size: 0.78rem;">
+                            <div class="position-relative">
+                                <div class="position-absolute bg-success rounded-circle" style="width: 7px; height: 7px; left: -16.5px; top: 4px;"></div>
+                                <span class="fw-600 d-block text-success">Application Received & Signed</span>
+                                <span class="text-muted" style="font-size: 0.7rem;">Today at 10:14 AM</span>
+                            </div>
+                            <div class="position-relative">
+                                <div class="position-absolute bg-success rounded-circle" style="width: 7px; height: 7px; left: -16.5px; top: 4px;"></div>
+                                <span class="fw-600 d-block text-success">Document Integrity Checked</span>
+                                <span class="text-muted" style="font-size: 0.7rem;">Today at 10:30 AM</span>
+                            </div>
+                            <div class="position-relative">
+                                <div class="position-absolute bg-primary rounded-circle" style="width: 7px; height: 7px; left: -16.5px; top: 4px; box-shadow: 0 0 0 3px rgba(79,70,229,0.15);"></div>
+                                <span class="fw-600 d-block text-primary">Awaiting Clearance Manifest</span>
+                                <span class="text-muted" style="font-size: 0.7rem;">Processing System Queue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-secondary w-100 mt-2"><i class="bi bi-arrow-clockwise me-1"></i> Sync Pipeline</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ledger logs table -->
+        <div class="premium-panel p-3 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-700 mb-0">Live Operational Ledger Logs</h6>
+                <button class="btn btn-light border btn-sm"><i class="bi bi-download me-1"></i> Export Metrics</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" style="font-size: 0.78rem;">
+                    <thead class="table-light text-muted fw-600">
+                        <tr>
+                            <th>Token ID</th>
+                            <th>Target Entity Profile</th>
+                            <th>Service Class</th>
+                            <th>Timestamp Log</th>
+                            <th>Execution State</th>
+                            <th class="text-end">Command</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-600 text-primary">#TK-8831</td>
+                            <td>
+                                <div class="fw-600">Alex Rivera</div>
+                                <small class="text-muted" style="font-size: 0.68rem;">alex@rivera.io</small>
+                            </td>
+                            <td><span class="badge bg-light text-secondary border">Tax Engine</span></td>
+                            <td class="text-muted">08 June 2026, 11:00 AM</td>
+                            <td><span class="badge bg-success-subtle text-success fw-normal"><i class="bi bi-check-circle-fill me-1"></i> Settled Complete</span></td>
+                            <td class="text-end"><button class="btn btn-sm btn-light border p-1 py-0"><i class="bi bi-eye"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-600 text-primary">#TK-8832</td>
+                            <td>
+                                <div class="fw-600">Marcus Vance</div>
+                                <small class="text-muted" style="font-size: 0.68rem;">m.vance@tech.com</small>
+                            </td>
+                            <td><span class="badge bg-light text-secondary border">Licensing</span></td>
+                            <td class="text-muted">08 June 2026, 10:45 AM</td>
+                            <td><span class="badge bg-warning-subtle text-warning fw-normal"><i class="bi bi-pause-circle-fill me-1"></i> Compiling</span></td>
+                            <td class="text-end"><button class="btn btn-sm btn-light border p-1 py-0"><i class="bi bi-eye"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

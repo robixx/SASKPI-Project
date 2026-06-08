@@ -1,0 +1,173 @@
+﻿:root {
+  --bg-main: #f6fbf6;
+  --panel-bg: #ffffff;
+  --border-color: #dbe9dd;
+  --primary-color: #0b5f3a;
+  --text-main: #0b2f23;
+  --text-muted: #5b6b64;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* --- FIXED: Added Dynamic Styling Tweaks for Small Mobile Profiles --- */
+@media (max-width: 991.98px) {
+    .sticky-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        visibility: hidden;
+        box-shadow: 10px 0 30px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding-top: 85px !important; /* Pushes links down below fixed header height */
+    }
+
+        .sticky-sidebar.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+}
+
+/* Kanban board and card styles */
+.kanban-board {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.kanban-column {
+  min-width: 280px;
+  background: #f6f8fb;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.kanban-column h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.issue-card {
+  background: #fff;
+  border: 1px solid #e9eef6;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 10px rgba(15,23,42,0.03);
+}
+.issue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(11,95,58,0.06);
+  border-color: #cde8dd;
+}
+
+.issue-card .meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.badge-subtle {
+  background: rgba(79,70,229,0.06);
+  color: #4f46e5;
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 767.98px) {
+  .kanban-board { flex-direction: column; }
+  .kanban-column { min-width: 100%; }
+}
+
+/* Drag and drop visuals */
+.kanban-column.drag-over {
+  box-shadow: inset 0 0 0 3px rgba(79,70,229,0.06);
+  background: #f4f6fb;
+}
+
+.issue-card.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+/* Compact table rows and small buttons for dense display */
+.table th, .table td {
+  padding: 0.35rem 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.2rem 0.35rem;
+  font-size: 0.78rem;
+}
+
+/* Force all buttons to appear small visually */
+.btn { padding: 0.22rem 0.45rem; font-size: 0.85rem; }
+
+/* Improve table visuals: subtle zebra, header styling, hover and compact borders */
+.table { border-collapse: separate; border-spacing: 0; font-family: 'Roboto', sans-serif; }
+.table thead th { background: #fbfbff; border-bottom: 1px solid #e6e9ef; font-weight: 600; }
+.table tbody tr:nth-child(odd) { background: rgba(15,23,42,0.02); }
+.table tbody tr:hover { background: rgba(79,70,229,0.03); }
+.table td { vertical-align: middle; }
+.table .text-end .btn { padding: 0.2rem 0.35rem; }
+
+/* action buttons inside tables: compact icons */
+.table .btn i { margin: 0; }
+.table .btn .bi { font-size: 0.95rem; }
+
+/* Mobile adjustments for parameter tuner actions */
+.page-actions { display: flex; }
+@media (max-width: 575.98px) {
+    .page-actions { flex-direction: column-reverse; align-items: stretch; gap: 0.5rem; }
+    .page-actions .btn { width: 100%; }
+    .connect-btn { width: 100%; display: inline-block; margin-top: 0.5rem; }
+}
+
+/* Responsive datatable action buttons styling */
+.datatable-toolbar .btn { display: inline-flex; align-items: center; }
+.datatable-toolbar .btn .btn-text { display: inline; }
+
+@media (max-width: 767.98px) {
+    /* hide button text on smaller screens, keep icons and tooltip */
+    .datatable-toolbar .btn .btn-text { display: none; }
+    .datatable-toolbar .btn { padding: 0.35rem; min-width: 38px; justify-content: center; }
+}
+
+@media (min-width: 768px) {
+    .datatable-toolbar .btn { padding: 0.25rem 0.5rem; }
+}
+
+/* Make action icons visually international-friendly (clear, high contrast) */
+.btn .bi { font-size: 1rem; color: #0f172a; }
+.btn-outline-danger .bi { color: #b91c1c; }
+.btn-light .bi { color: #334155; }
+
+
+

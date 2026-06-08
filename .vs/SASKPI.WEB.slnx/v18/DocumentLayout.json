@@ -1,0 +1,267 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ITCL\\SASKPI.WEB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\shared\\_pageheader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\shared\\_pageheader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\home\\coreterminal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\home\\coreterminal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\home\\servicefolders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\home\\servicefolders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\home\\billingsmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\home\\billingsmatrix.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\views\\home\\parametertuner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\views\\home\\parametertuner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|e:\\itcl\\saskpi.web\\saskpi.web\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{308D9A21-A1D9-420A-A1AD-92DC50C42E33}|SASKPI.WEB\\SASKPI.WEB.csproj|solutionrelative:saskpi.web\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 402,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 348,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": ".gitignore",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\.gitignore",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\.gitignore",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\.gitignore",
+              "RelativeToolTip": "SASKPI.WEB\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-08T09:00:26.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_PageHeader.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Shared\\_PageHeader.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Shared\\_PageHeader.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Shared\\_PageHeader.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Shared\\_PageHeader.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T08:33:24.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\wwwroot\\js\\site.js",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "SASKPI.WEB\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAALcAAAAAAAAAAAAewMYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-08T08:05:18.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ParameterTuner.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\ParameterTuner.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Home\\ParameterTuner.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\ParameterTuner.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Home\\ParameterTuner.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAABSwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T06:29:47.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BillingsMatrix.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\BillingsMatrix.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Home\\BillingsMatrix.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\BillingsMatrix.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Home\\BillingsMatrix.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAABSwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T06:29:30.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceFolders.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\ServiceFolders.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Home\\ServiceFolders.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\ServiceFolders.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Home\\ServiceFolders.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAABSwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T06:29:05.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CoreTerminal.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\CoreTerminal.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Home\\CoreTerminal.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\CoreTerminal.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Home\\CoreTerminal.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAABSwJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T06:28:57.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Program.cs",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Program.cs",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Program.cs",
+              "RelativeToolTip": "SASKPI.WEB\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T06:20:25.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "SASKPI.WEB\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAKIAAAAAAAAAAAApwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-08T06:01:44.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAALwAAAAAAAAAAAAYwDEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T05:31:20.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SASKPI.WEB\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIA1wA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T04:58:43.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Models\\ErrorViewModel.cs",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "SASKPI.WEB\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T04:57:56.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SASKPI.WEB\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\ITCL\\SASKPI.WEB\\SASKPI.WEB\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SASKPI.WEB\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAzwHoBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T05:01:49.024Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

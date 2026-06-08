@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Project Board";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h4 class="mb-0">NexusFlow — Sprint Board</h4>
+            <small class="text-muted">Sprint 23 • Ends in 6 days</small>
+        </div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary">Filters</button>
+            <button class="btn btn-primary">Create Issue</button>
+        </div>
+    </div>
+
+    <div class="kanban-board">
+        <div class="kanban-column" data-status="backlog">
+            <h6>Backlog <span class="badge bg-light text-muted ms-1">4</span></h6>
+            <div class="issue-card" draggable="true" data-issue="PROJ-101">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <div class="fw-600">[PROJ-101] Improve onboarding flow</div>
+                        <div class="meta">Epic: Onboarding • Assignee: J. Doe</div>
+                    </div>
+                    <div><span class="badge-subtle">High</span></div>
+                </div>
+            </div>
+            <div class="issue-card" draggable="true" data-issue="PROJ-102">
+                <div class="fw-600">[PROJ-102] Add phone verification</div>
+                <div class="meta">Assignee: M. Vance</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-status="todo">
+            <h6>To Do <span class="badge bg-light text-muted ms-1">2</span></h6>
+            <div class="issue-card" draggable="true" data-issue="PROJ-110">
+                <div class="fw-600">[PROJ-110] Audit log export</div>
+                <div class="meta">Assignee: S. Jenkins • 3 subtasks</div>
+            </div>
+            <div class="issue-card" draggable="true" data-issue="PROJ-117">
+                <div class="fw-600">[PROJ-117] Support multi-tenant themes</div>
+                <div class="meta">Assignee: A. Rivera</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-status="inprogress">
+            <h6>In Progress <span class="badge bg-light text-muted ms-1">3</span></h6>
+            <div class="issue-card" draggable="true" data-issue="PROJ-121">
+                <div class="fw-600">[PROJ-121] API Gateway rate-limits</div>
+                <div class="meta">Assignee: Dev Team • Progress: 65%</div>
+            </div>
+            <div class="issue-card" draggable="true" data-issue="PROJ-125">
+                <div class="fw-600">[PROJ-125] Billing reconciliation job</div>
+                <div class="meta">Assignee: Ops • ETA: Today</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-status="done">
+            <h6>Done <span class="badge bg-light text-muted ms-1">5</span></h6>
+            <div class="issue-card" draggable="true" data-issue="PROJ-091">
+                <div class="fw-600">[PROJ-091] Fix login CSRF</div>
+                <div class="meta">Merged • Deployed</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const board = document.querySelector('.kanban-board');
+        if (!board) return;
+
+        let dragSrc = null;
+
+        function handleDragStart(e) {
+            dragSrc = this;
+            this.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', this.dataset.issue || '');
+        }
+
+        function handleDragEnd() {
+            this.classList.remove('dragging');
+            document.querySelectorAll('.kanban-column').forEach(c => c.classList.remove('drag-over'));
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragEnter(e) {
+            if (this !== dragSrc) this.classList.add('drag-over');
+        }
+
+        function handleDragLeave(e) {
+            this.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            e.stopPropagation();
+            this.classList.remove('drag-over');
+            const issueId = e.dataTransfer.getData('text/plain');
+            const draggedEl = dragSrc; // already captured
+            if (draggedEl && this !== draggedEl.parentElement) {
+                // append dragged element to this column
+                this.appendChild(draggedEl);
+
+                // Update status visual or send to server (demo: console)
+                const newStatus = this.dataset.status || '';
+                console.log('Issue', issueId, 'moved to', newStatus);
+
+                // Optionally: send fetch to server to persist new status
+                // fetch('/api/issues/move', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ id: issueId, status: newStatus }) });
+            }
+            return false;
+        }
+
+        document.querySelectorAll('.issue-card').forEach(function (card) {
+            card.addEventListener('dragstart', handleDragStart, false);
+            card.addEventListener('dragend', handleDragEnd, false);
+        });
+
+        document.querySelectorAll('.kanban-column').forEach(function (col) {
+            col.addEventListener('dragenter', handleDragEnter, false);
+            col.addEventListener('dragover', handleDragOver, false);
+            col.addEventListener('dragleave', handleDragLeave, false);
+            col.addEventListener('drop', handleDrop, false);
+        });
+    })();
+</script>

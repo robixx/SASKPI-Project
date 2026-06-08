@@ -1,0 +1,42 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* --- FIXED: Added Dynamic Styling Tweaks for Small Mobile Profiles --- */
+@media (max-width: 991.98px) {
+    .sticky-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        visibility: hidden;
+        box-shadow: 10px 0 30px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding-top: 85px !important; /* Pushes links down below fixed header height */
+    }
+
+        .sticky-sidebar.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+}

@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Sprint Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h4 class="mb-0">Sprint 23 Dashboard</h4>
+            <small class="text-muted">Team velocity and sprint health</small>
+        </div>
+        <div>
+            <button class="btn btn-outline-secondary btn-sm">Export</button>
+            <button class="btn btn-primary btn-sm">Start Sprint</button>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-12 col-lg-4">
+            <div class="premium-panel p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                        <div class="text-muted small">Velocity</div>
+                        <div class="fw-700 fs-4">42 pts</div>
+                    </div>
+                    <div class="text-end">
+                        <small class="text-muted">Completed</small>
+                    </div>
+                </div>
+                <div class="progress" style="height:8px;"><div class="progress-bar" role="progressbar" style="width: 75%"></div></div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="premium-panel p-3">
+                <div class="text-muted small">Open Issues</div>
+                <div class="fw-700 fs-4">18</div>
+                <small class="text-muted">2 blockers</small>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="premium-panel p-3">
+                <div class="text-muted small">Cycle Time</div>
+                <div class="fw-700 fs-4">3.2 days</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-1">
+        <div class="col-12">
+            <div class="premium-panel p-3">
+                <h6 class="mb-3">Recent Releases</h6>
+                <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="fw-600">Release 2026.06.01</div>
+                            <small class="text-muted">Includes security fixes and performance improvements</small>
+                        </div>
+                        <div class="text-muted">Deployed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Rider
+.idea/
+
+# dotnet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish directory
+publish/
+
+# Secret manager
+secrets.json
+
+# npm
+node_modules/
+
+# IDE files
+*.code-workspace
+
+# Logs
+*.log
+
+# JetBrains Rider
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.swp
+*.tmp
+
+# NuGet
+*.nupkg
+packages/
+
+# Visual Studio Code
+.vscode/
+
+# Local DB
+*.mdf
+*.ldf
+
+# JetBrains
+*.iml
+
+# Ignore build artifacts
+**/bin/
+**/obj/

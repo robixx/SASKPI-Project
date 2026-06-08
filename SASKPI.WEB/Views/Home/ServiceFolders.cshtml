@@ -1,0 +1,88 @@
+@{
+    ViewData["Title"] = "Backlog";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h4 class="mb-0">Project Backlog</h4>
+            <small class="text-muted">All issues and their status</small>
+        </div>
+        <div class="page-actions d-flex gap-2 align-items-center">
+            <button class="btn btn-outline-secondary btn-sm d-flex align-items-center" title="Import"><i class="bi bi-upload me-1"></i><span class="d-none d-md-inline">Import</span></button>
+            <button class="btn btn-outline-secondary btn-sm d-flex align-items-center" title="Export"><i class="bi bi-download me-1"></i><span class="d-none d-md-inline">Export</span></button>
+            <button class="btn btn-primary btn-sm d-flex align-items-center" title="New Issue"><i class="bi bi-plus-lg me-1"></i><span class="d-none d-md-inline">New Issue</span></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="premium-panel p-3">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 datatable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Issue</th>
+                                <th>Type</th>
+                                <th>Priority</th>
+                                <th>Assignee</th>
+                                <th>Sprint</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-600">PROJ-121 API Gateway rate-limits</td>
+                                <td>Task</td>
+                                <td><span class="badge-subtle">High</span></td>
+                                <td>A. Rivera</td>
+                                <td>Sprint 23</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">PROJ-125 Billing reconciliation job</td>
+                                <td>Story</td>
+                                <td><span class="badge bg-warning-subtle text-warning">Medium</span></td>
+                                <td>Ops</td>
+                                <td>Backlog</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">PROJ-130 Add OAuth login</td>
+                                <td>Story</td>
+                                <td><span class="badge-subtle">Low</span></td>
+                                <td>J. Doe</td>
+                                <td>Backlog</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">PROJ-131 Export ledger CSV</td>
+                                <td>Task</td>
+                                <td><span class="badge bg-success-subtle text-success">Low</span></td>
+                                <td>Ops</td>
+                                <td>Sprint 23</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">PROJ-132 UI polish for mobile</td>
+                                <td>Task</td>
+                                <td><span class="badge-subtle">Medium</span></td>
+                                <td>A. Rivera</td>
+                                <td>Sprint 24</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">PROJ-133 Integrate Slack alerts</td>
+                                <td>Story</td>
+                                <td><span class="badge-subtle">High</span></td>
+                                <td>S. Jenkins</td>
+                                <td>Backlog</td>
+                                <td class="text-end"><button class="btn btn-sm btn-light border">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

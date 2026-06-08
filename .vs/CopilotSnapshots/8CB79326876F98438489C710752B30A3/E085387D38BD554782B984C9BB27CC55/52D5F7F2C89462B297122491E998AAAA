@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8fafc" />
+    <title>@ViewData["Title"] - SASKPI.WEB</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SASKPI.WEB.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+            :root {
+                --bg-main: #f8fafc;
+                --panel-bg: #ffffff;
+                --border-color: #e2e8f0;
+                --primary-color: #4f46e5;
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+            }
+
+            body {
+                /* Use Roboto across the project */
+                font-family: 'Roboto', sans-serif;
+                background-color: var(--bg-main);
+                color: var(--text-main);
+                font-size: 0.82rem;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+
+            .premium-panel {
+                background: var(--panel-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+            }
+
+            /* Fixed Top Header Settings Updated */
+            .fixed-header-space {
+                margin-top: 70px;
+            }
+
+            /* Responsive Sidebar Grid and Animation Rules */
+            .sticky-sidebar {
+                position: sticky;
+                top: 70px;
+                height: calc(100vh - 70px - 53px);
+                overflow-y: auto;
+                border-top: 0;
+                border-left: 0;
+                border-bottom: 0;
+                border-radius: 0 8px 8px 0;
+                transition: transform 0.25s ease-in-out, visibility 0.25s;
+                background: var(--panel-bg);
+                z-index: 1040;
+            }
+
+            /* Off-canvas behaviour for small devices */
+            @@media (max-width: 991.98px) {
+                #sidebarContainer {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    height: 100vh;
+                    width: 260px;
+                    z-index: 1040;
+                    pointer-events: none; /* disabled until active */
+                }
+
+                .sticky-sidebar {
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    height: calc(100vh - 70px - 53px);
+                    width: 260px;
+                    transform: translateX(-110%);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    border-radius: 0 8px 8px 0;
+                }
+
+                .sticky-sidebar.active {
+                    transform: translateX(0);
+                }
+
+                .sidebar-backdrop {
+                    display: block;
+                }
+
+                #sidebarContainer.active {
+                    pointer-events: auto;
+                }
+            }
+
+            /* Overlay backdrop when mobile menu triggers open */
+            .sidebar-backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(15, 23, 42, 0.4);
+                backdrop-filter: blur(2px);
+                z-index: 1035;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .sidebar-backdrop.show {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            
+
+            .nav-link-custom {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 9px 12px;
+                color: var(--text-muted);
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.15s ease;
+            }
+
+                .nav-link-custom:hover, .nav-link-custom.active {
+                    background: #f1f5f9;
+                    color: var(--primary-color);
+                }
+
+            /* Ultra-Crisp Action Card Hovers */
+            .action-card {
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+            }
+
+                .action-card:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+                    border-color: #cbd5e1;
+                }
+
+                .action-card::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 3px;
+                    background: transparent;
+                    transition: background 0.15s ease;
+                }
+
+                .action-card:hover::before {
+                    background: var(--primary-color);
+                }
+
+            /* Universal Smooth Hover Menu Blueprint */
+            .hover-menu-wrapper {
+                position: relative;
+                display: inline-block;
+            }
+
+            .icon-trigger {
+                width: 34px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                color: var(--text-muted);
+                background: #f1f5f9;
+                cursor: pointer;
+                position: relative;
+                transition: background 0.15s;
+            }
+
+                .icon-trigger:hover {
+                    background: #e2e8f0;
+                    color: var(--text-main);
+                }
+
+            .icon-badge {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 7px;
+                height: 7px;
+                background: #ef4444;
+                border-radius: 50%;
+            }
+
+            /* Dropdown Windows Architecture */
+            .hover-dropdown-box {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: #ffffff;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(8px);
+                transition: all 0.15s ease;
+                z-index: 1100;
+                padding: 8px;
+            }
+
+            .hover-menu-wrapper:hover .hover-dropdown-box {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(4px);
+            }
+
+            .dropdown-item-row {
+                display: flex;
+                gap: 10px;
+                padding: 8px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: var(--text-main);
+                transition: background 0.1s;
+            }
+
+                .dropdown-item-row:hover {
+                    background: #f8fafc;
+                }
+
+            /* Input Controls Setup */
+            .form-control, .form-select, .btn {
+                font-size: 0.82rem;
+                padding: 7px 10px;
+                border-radius: 5px;
+            }
+
+                .form-control:focus, .form-select:focus {
+                    border-color: var(--primary-color);
+                    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+                }
+    </style>
+    <noscript>
+        <style>
+            /* Ensure sidebar is visible when JS is disabled */
+            #sidebarContainer { position: static; width: auto; }
+            .sticky-sidebar { transform: none !important; position: static !important; }
+            .sidebar-backdrop { display: none !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <header class="fixed-top bg-white border-bottom px-3 px-md-4 py-2.5 d-flex justify-content-between align-items-center shadow-sm" style="z-index: 1050; height: 60px;">
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+            <button class="btn btn-light border d-lg-none me-1 d-flex align-items-center justify-content-center" id="sidebarToggle" type="button" style="width: 34px; height: 34px; padding: 0;">
+                <i class="bi bi-list fs-5"></i>
+            </button>
+
+            <div class="d-flex align-items-center gap-2">
+                <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded" style="width: 28px; height: 28px;">
+                    <i class="bi bi-shield-check fs-5"></i>
+                </div>
+                <span class="fw-700 text-dark" style="letter-spacing: -0.3px; font-size: 0.95rem;">NexusFlow</span>
+            </div>
+            <div class="vr text-secondary opacity-25 d-none d-md-block"></div>
+            <div class="d-none d-md-block">
+                <p class="text-muted mb-0" style="font-size: 0.75rem;">Consolidated cross-functional management console.</p>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+            <div class="hover-menu-wrapper">
+                <div class="icon-trigger">
+                    <i class="bi bi-envelope"></i>
+                    <span class="icon-badge"></span>
+                </div>
+                <div class="hover-dropdown-box" style="width: 280px;">
+                    <div class="px-2 py-1 border-bottom mb-1 d-flex justify-content-between align-items-center">
+                        <span class="fw-700 text-dark">Recent Inbound Mail</span>
+                        <span class="badge bg-primary-subtle text-primary" style="font-size: 0.65rem;">2 New</span>
+                    </div>
+                    <a href="#" class="dropdown-item-row">
+                        <div class="text-primary mt-0.5"><i class="bi bi-circle-fill" style="font-size: 0.5rem;"></i></div>
+                        <div>
+                            <div class="fw-600 mb-0" style="font-size: 0.78rem;">System Dispatcher</div>
+                            <small class="text-muted d-block text-truncate" style="max-width: 220px; font-size: 0.72rem;">API Gateway response latency payload alert report...</small>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item-row">
+                        <div class="text-primary mt-0.5"><i class="bi bi-circle-fill" style="font-size: 0.5rem;"></i></div>
+                        <div>
+                            <div class="fw-600 mb-0" style="font-size: 0.78rem;">Legal Dept (Sarah)</div>
+                            <small class="text-muted d-block text-truncate" style="max-width: 220px; font-size: 0.72rem;">Compliance audit documentation check updates signed.</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hover-menu-wrapper">
+                <div class="icon-trigger">
+                    <i class="bi bi-bell"></i>
+                    <span class="icon-badge"></span>
+                </div>
+                <div class="hover-dropdown-box" style="width: 260px;">
+                    <div class="px-2 py-1 border-bottom mb-1">
+                        <span class="fw-700 text-dark">System Status Stream</span>
+                    </div>
+                    <div class="p-2 d-flex gap-2 align-items-start border-bottom-subtle">
+                        <i class="bi bi-exclamation-triangle text-warning mt-0.5"></i>
+                        <div>
+                            <span class="d-block fw-500" style="font-size: 0.75rem;">Node #4412 load surge</span>
+                            <small class="text-muted" style="font-size: 0.68rem;">3 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="p-2 d-flex gap-2 align-items-start">
+                        <i class="bi bi-check-circle text-success mt-0.5"></i>
+                        <div>
+                            <span class="d-block fw-500" style="font-size: 0.75rem;">Backup structural export done</span>
+                            <small class="text-muted" style="font-size: 0.68rem;">14 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vr mx-1 text-secondary opacity-25"></div>
+
+            <div class="hover-menu-wrapper">
+                <div class="d-flex align-items-center gap-2 p-1 pe-2 bg-light rounded border" style="cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="User" class="rounded" style="width: 24px; height: 24px; object-fit: cover;">
+                    <div class="d-none d-sm-block text-start">
+                        <span class="fw-600 d-block" style="font-size: 0.78rem; line-height: 1;">S. Jenkins</span>
+                    </div>
+                    <i class="bi bi-chevron-down text-muted" style="font-size: 0.65rem;"></i>
+                </div>
+
+                <div class="hover-dropdown-box" style="width: 160px;">
+                    <a href="#" class="dropdown-item-row align-items-center py-1.5">
+                        <i class="bi bi-person text-muted"></i> <span style="font-size: 0.78rem;">Profile Specs</span>
+                    </a>
+                    <a href="#" class="dropdown-item-row align-items-center py-1.5 border-top text-danger">
+                        <i class="bi bi-box-arrow-right"></i> <span style="font-size: 0.78rem;">Log Out System</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid flex-grow-1 fixed-header-space px-0 pe-md-3">
+        <div class="row g-3 mx-0">
+
+            <div class="col-lg-3 col-xl-2 ps-0" id="sidebarContainer">
+                <div class="sticky-sidebar p-3 d-flex flex-column justify-content-between">
+                    <div>
+                        <span class="text-uppercase text-muted fw-700 px-1 d-block mb-2" style="font-size: 0.68rem; letter-spacing: 0.5px;">Navigation</span>
+                        <nav class="nav flex-column gap-1">
+                            @{
+                                var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+                                var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+                                string ActiveIf(string ctrl, string act) => (string.Equals(currentController, ctrl, System.StringComparison.OrdinalIgnoreCase) && string.Equals(currentAction, act, System.StringComparison.OrdinalIgnoreCase)) ? " active" : "";
+                            }
+                            <a asp-controller="Home" asp-action="Index" class="nav-link-custom@(ActiveIf("Home","Index"))"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                            <a asp-controller="Home" asp-action="CoreTerminal" class="nav-link-custom@(ActiveIf("Home","CoreTerminal"))"><i class="bi bi-grid-1x2"></i> Core Terminal</a>
+                            <a asp-controller="Home" asp-action="ServiceFolders" class="nav-link-custom@(ActiveIf("Home","ServiceFolders"))"><i class="bi bi-file-earmark-text"></i> Service Folders</a>
+                            <a asp-controller="Home" asp-action="BillingsMatrix" class="nav-link-custom@(ActiveIf("Home","BillingsMatrix"))"><i class="bi bi-credit-card"></i> Billings Matrix</a>
+                            <a asp-controller="Home" asp-action="ParameterTuner" class="nav-link-custom@(ActiveIf("Home","ParameterTuner"))"><i class="bi bi-sliders2"></i> Parameter Tuner</a>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-9 col-xl-10 px-3 ps-lg-4 pe-lg-2">
+                <div class="d-flex flex-column gap-3">
+
+                    @RenderBody()
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-white border-top px-4 py-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 shadow-sm w-100" style="font-size: 0.75rem; letter-spacing: -0.1px;">
+        <div class="text-secondary order-2 order-md-1 text-center text-md-start">
+            <span class="fw-500 text-dark">&copy; 2026 NexusFlow Technologies Inc.</span>
+            <span class="mx-1 d-none d-md-inline text-muted">•</span>
+            <span class="text-muted d-block d-md-inline">All enterprise operational pathways secured.</span>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 order-1 order-md-2">
+            <div class="d-flex align-items-center gap-1.5 px-2.5 py-1 bg-success-subtle text-success rounded-pill border border-success-subtle fw-600" style="font-size: 0.7rem;">
+                <span class="bg-success rounded-circle d-inline-block p-1"></span>
+                Core Engine Connected
+            </div>
+
+            <div class="vr text-secondary opacity-25 d-none d-sm-block my-1 mx-1"></div>
+
+            <div class="d-flex align-items-center gap-2 text-secondary bg-light border rounded px-2 py-1">
+                <span class="text-muted" style="font-size: 0.68rem; font-weight: 500;">ENV:</span>
+                <strong class="text-dark fw-600">Production-Main</strong>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 text-secondary bg-light border rounded px-2 py-1">
+                <span class="text-muted" style="font-size: 0.68rem; font-weight: 500;">PING:</span>
+                <strong class="text-dark fw-600"><i class="bi bi-lightning-charge-fill text-warning me-0.5"></i>14ms</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("sidebarToggle");
+        const backdrop = document.getElementById("sidebarBackdrop");
+        const sidebar = document.querySelector("#sidebarContainer .sticky-sidebar");
+        const sidebarContainer = document.getElementById("sidebarContainer");
+
+        function openSidebar() {
+            sidebar?.classList.add("active");
+            sidebarContainer?.classList.add("active");
+            backdrop?.classList.add("show");
+        }
+
+        function closeSidebar() {
+            sidebar?.classList.remove("active");
+            sidebarContainer?.classList.remove("active");
+            backdrop?.classList.remove("show");
+        }
+
+        if (toggleBtn && sidebar && backdrop) {
+            toggleBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                if (sidebar.classList.contains("active")) {
+                    closeSidebar();
+                } else {
+                    openSidebar();
+                }
+            });
+
+            backdrop.addEventListener("click", closeSidebar);
+
+            window.addEventListener("resize", function () {
+                if (window.innerWidth >= 992) {
+                    closeSidebar();
+                }
+            });
+        }
+        });
+    </script>
+</body>
+</html>
